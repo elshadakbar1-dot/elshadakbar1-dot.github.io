@@ -3135,4 +3135,32 @@ input, select, textarea {
 						margin-bottom: 2em;
 					}
 
-	}
+	} /* === Contact Bolmesinin Arxafonu (Addim 9) === */
+
+#footer {
+    background-color: #1c1c1c; /* Eger shekil yuklenmese, qara fon verir */
+
+    /* Bu 3 setir sizin shekili elave edir */
+    background-image: url(../../images/arka.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    position: relative; /* Filtr uchun bu vacibdir */
+}
+
+/* Bu, sizin dediyiniz "Qaranliq Filtr" effektidir */
+#footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.70); /* 70% qara filtr */
+}
+
+/* Bu, filtrin altinda qalan yazilari uste cixarir */
+#footer .container {
+    position: relative;
+    z-index: 2;
+}
